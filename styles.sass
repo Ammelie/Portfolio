@@ -19,8 +19,8 @@ $z: skyblue
 .wrapper
 	margin: 0 auto
 	background: $x
-	width: 50vw
-	height: 100vh
+	width: 100vw
+	// height: 100vh
 	+flex-col(stretch)
 
 header
@@ -29,7 +29,7 @@ header
 	+flex-col(stretch)
 
 	.header-text
-		height: 70%
+		// height: 70%
 		+flex-col(center)
 		justify-content: center
 
@@ -37,16 +37,6 @@ header
 		background: $y
 		height: 30%
 
-.content
-	background: $z
-	width: 100%
-	height: 80%
-	+flex-row(stretch)
-
-	article
-		background: $x
-		width: 70%
-
-	aside
-		background: $z
-		width: 30%
+.screen
+	height: 100vh
+	border: 2px solid black

@@ -1,17 +1,21 @@
 doctype html
 html
+	include mixins.pug
+	
 	head
 		meta(content="charset=utf-8")
-		title SADAKO
-		link(href='//fonts.googleapis.com/earlyaccess/mplus1p.css')
-		link(href='styles.css', rel='stylesheet')
+		title Ammelie Neth - Front End Developer
+		link(href="//fonts.googleapis.com/earlyaccess/mplus1p.css")
+		link(href="styles.css", rel="stylesheet")
 	body
 		div.wrapper
-			header
-				div.header-text
-					h1 Welcome to SADAKO VILLAGE
-					p The bestest village to die
-				nav
-			div.content
-				article
-				aside
+			+screen("intro")
+				header
+					div.header-text
+						h1 Hi
+						p It me.
+					nav
+			+screen("about")
+			+screen("portfolio")
+			+screen("contact")
+			

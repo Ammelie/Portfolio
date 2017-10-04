@@ -48,8 +48,7 @@ table {
 .wrapper {
   margin: 0 auto;
   background: peachpuff;
-  width: 50vw;
-  height: 100vh;
+  width: 100vw;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -81,7 +80,6 @@ header {
   -ms-flex-align: stretch;
   align-items: stretch; }
   header .header-text {
-    height: 70%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -103,26 +101,6 @@ header {
     background: lavender;
     height: 30%; }
 
-.content {
-  background: skyblue;
-  width: 100%;
-  height: 80%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch; }
-  .content article {
-    background: peachpuff;
-    width: 70%; }
-  .content aside {
-    background: skyblue;
-    width: 30%; }
+.screen {
+  height: 100vh;
+  border: 2px solid black; }
