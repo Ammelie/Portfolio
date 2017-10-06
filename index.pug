@@ -5,17 +5,22 @@ html
 	head
 		meta(content="charset=utf-8")
 		title Ammelie Neth - Front End Developer
-		link(href="https://fonts.googleapis.com/css?family=Arimo:400,400i|Playfair+Display:400,900&amp;subset=latin-ext" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Roboto:200|Playfair+Display:400,900&amp;subset=latin-ext" rel="stylesheet")
 		link(href="styles.css", rel="stylesheet")
 	body
 		div.wrapper
 			+screen("intro")
 				header
-					nav
 					div.header-text
-						h1 Hi
-						p It me.
+						h1 Ammelie Neth
+						h2 Front End Developer
+						+nav("about", "portfolio", "contact")
 			+screen("about")
+				h2 Nice to meet you!
+				p.
+					My name is Ammelie. I'm really into web development, specifically JavaScript programming and UI design.
+					Starting from November, I need to do a 5 month internship followed by a thesis. If you or someone you know need
+					are k
 			+screen("portfolio")
 			+screen("contact")
 			

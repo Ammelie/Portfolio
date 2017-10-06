@@ -2,3 +2,13 @@ mixin screen(id)
 	div(class!="screen" id=id)
 		if block
 			block
+
+
+mixin nav(...items)
+	nav
+		ul
+			each item in items
+				li
+					a(href='index.html#' + item)= item
+					
+		
