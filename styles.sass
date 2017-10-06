@@ -1,9 +1,23 @@
 @import "reset"
 
-$x: peachpuff
-$y: lavender
-$z: skyblue
+//   COLORS   //
+$accent: #F2545B
+$blue: #133C55
+$grey: #364359
+$menu: #202C39
+$background: #011C27
+$text: #EAEBED
 
+
+//  FONT STYLES   //
+=header
+	font-family: 'Playfair Display', serif
+
+=paragraph
+	font-family: 'Arimo', sans-serif
+
+
+//   FLEX MIXINS   //
 =flex-col($alignment)
 	display: flex
 	flex-flow: column nowrap
@@ -15,28 +29,31 @@ $z: skyblue
 	align-items: $alignment
 
 
+//   SASS MAGIC   //
+body
+	background: $background
+	font-size: 16px
+	color: $text
+	text-align: left
 
 .wrapper
-	margin: 0 auto
-	background: $x
-	width: 100vw
-	// height: 100vh
 	+flex-col(stretch)
+	margin: 0 auto
+	@media(min-width: 1000px)
+		width: 80vw
+	@media(min-width: 1300px)
+		width: 70vw
+	@media(min-width: 1600px)
+		width: 50vw
 
 header
-	height: 20%
-	text-align: center
 	+flex-col(stretch)
-
-	.header-text
-		// height: 70%
-		+flex-col(center)
-		justify-content: center
-
+	.header
+		
 	nav
-		background: $y
-		height: 30%
+		background: $menu
+		height: 10vh
 
 .screen
 	height: 100vh
-	border: 2px solid black
+	border: 1px solid $accent
