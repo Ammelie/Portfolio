@@ -5,22 +5,35 @@ html
 	head
 		meta(content="charset=utf-8")
 		title Ammelie Neth - Front End Developer
-		link(href="https://fonts.googleapis.com/css?family=Roboto:200|Playfair+Display:400,900&amp;subset=latin-ext" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Assistant:300:700|Playfair+Display:400,900&amp;subset=latin-ext" rel="stylesheet")
 		link(href="styles.css", rel="stylesheet")
+		script(src="scripts.js")
 	body
-		div.wrapper
-			+screen("intro")
-				header
-					div.header-text
-						h1 Ammelie Neth
-						h2 Front End Developer
-						+nav("about", "portfolio", "contact")
-			+screen("about")
-				h2 Nice to meet you!
-				p.
-					My name is Ammelie. I'm really into web development, specifically JavaScript programming and UI design.
-					Starting from November, I need to do a 5 month internship followed by a thesis. If you or someone you know need
-					are k
-			+screen("portfolio")
-			+screen("contact")
+		+screen("intro")
+			header
+				h1 Ammelie Neth
+				h2 Front End Developer
+			+nav("about", "resume", "portfolio", "contact")
 			
+		+screen("about")
+			div.about-content
+				div.about-text
+					h2 Nice to meet you!
+					p.
+						My name is Ammelie. I'm really into web development, specifically JavaScript programming and UI design.
+						I'm currently looking for a company where I can do a 5 month internship starting mid November, followed by thesis work.
+						If you or someone you know is looking to hire a junior developer and would like to have a chat, please
+						#[a(href="index.html#contact")="get in touch"]!
+					p.
+						If you'd like to find out more about what I've done so far, keep scrolling to read
+						#[a(href="index.html#resume")="my resume"]
+						or have a look at
+						#[a(href="index.html#portfolio")="my portfolio"].
+				img(src="portrait.jpg" alt="Photo of me" class="portrait" id="portrait")
+				img(src="portrait2.jpg" alt="Photo of me" class="portrait" id="portrait2")
+	
+		+screen("resume")
+	
+		+screen("portfolio")
+		
+		+screen("contact")

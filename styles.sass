@@ -22,14 +22,14 @@ h2
 	margin-bottom: 2rem
 
 p
-	font-family: 'Roboto', sans-serif
+	font-family: 'Assistant', sans-serif
 	font-size: 1rem
-	font-weight: 200
 	line-height: 1.5rem
+	margin-bottom: 1rem
 
 nav
 	ul li
-		font-family: 'Roboto', sans-serif
+		font-family: 'Assistant', sans-serif
 		margin-bottom: 1rem
 		text-transform: capitalize
 
@@ -37,19 +37,34 @@ a
 	color: $accent
 	text-decoration: none
 
+a:hover
+	color: $text
+
+p a
+	font-weight: bold
 
 
-//   FLEX MIXINS   //
-=flex-col($alignment)
+
+//   LAYOUT   //
+.intro, .about, .about-text
 	display: flex
 	flex-flow: column nowrap
-	align-items: $alignment
+	justify-content: center
 
-=flex-row($alignment)
+.about-content
 	display: flex
-	flex-flow: row wrap
-	align-items: $alignment
+	flex-flow: column nowrap
+	align-items: center
+	@media (min-width: 800px)
+		display: grid
+		grid-template-columns: 2fr 1fr
+		grid-column-gap: 2rem
 
+.resume
+
+.portfolio
+
+.contact
 
 
 //   SASS MAGIC   //
@@ -57,21 +72,27 @@ body
 	background: $background
 	font-size: 16px
 	color: $text
-	text-align: left
-
-.wrapper
-	+flex-col(stretch)
-	margin: 0 auto
-	@media(min-width: 1000px)
-		width: 80vw
-	@media(min-width: 1300px)
-		width: 70vw
-	@media(min-width: 1600px)
-		width: 50vw
+	text-align: justify
 
 .screen
 	height: 100vh
-	+flex-col(flex-start)
-	justify-content: center
-	border: 1px solid $blue
+	// border: 1px solid $blue
 	margin: 0 5%
+
+.portrait
+	height: auto
+	width: 300px
+	border-radius: 50%
+	// @media(min-width: 800px)
+	// 	border-radius: 0
+
+#portrait2
+	margin-top: -300px
+	opacity: 0
+	transition: opacity 0.8s
+	@media(min-width: 800px)
+		height: 0
+		width: 0
+
+#portrait2.smile
+	opacity: 1
