@@ -6,34 +6,60 @@ html
 		meta(content="charset=utf-8")
 		title Ammelie Neth - Front End Developer
 		link(href="https://fonts.googleapis.com/css?family=Assistant:300:700|Playfair+Display:400,900&amp;subset=latin-ext" rel="stylesheet")
+		link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet")
 		link(href="styles.css", rel="stylesheet")
+		script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+		script(src="jquery.viewport.min.js" type="text/javascript")
 		script(src="scripts.js")
 	body
+		span(class="go-back")
+			i(class="fa fa-chevron-circle-up fa-5x" aria-hidden="true")
+				
 		+screen("intro")
 			header
 				h1 Ammelie Neth
 				h2 Front End Developer
-			+nav("about", "resume", "portfolio", "contact")
+			+nav("about", "resume", "contact")
 			
 		+screen("about")
 			div.about-content
 				div.about-text
 					h2 Nice to meet you!
 					p.
-						My name is Ammelie. I'm really into web development, specifically JavaScript programming and UI design.
-						I'm currently looking for a company where I can do a 5 month internship starting mid November, followed by thesis work.
+						My name is Ammelie. I'm really into web development, specifically JavaScript programming and design. I also really like
+						animals, video games, and drink a lot of tea.
+					p.
+						I am currently looking for a company where I can do a 5 month internship starting mid November, followed by thesis work.
 						If you or someone you know is looking to hire a junior developer and would like to have a chat, please
-						#[a(href="index.html#contact")="get in touch"]!
+						#[a(href="index.html#contact")="contact me"]! I would love to talk to you.
 					p.
 						If you'd like to find out more about what I've done so far, keep scrolling to read
-						#[a(href="index.html#resume")="my resume"]
-						or have a look at
-						#[a(href="index.html#portfolio")="my portfolio"].
-				img(src="portrait.jpg" alt="Photo of me" class="portrait" id="portrait")
-				img(src="portrait2.jpg" alt="Photo of me" class="portrait" id="portrait2")
+						#[+nav-link("resume", "my resume")].
+				div.portrait-container
+					img(src="portrait.jpg" alt="Photo of me" class="portrait" id="portrait")
+					img(src="portrait2.jpg" alt="Photo of me" class="portrait hidden-portrait" id="portrait2")
 	
 		+screen("resume")
-	
-		+screen("portfolio")
+			h2 Resume
+			div(class="resume-columns")
+				div
+					h3(class="resume-column-header") Education
+					div(class="resume-content" id="education")
+						include education
+				div
+					h3(class="resume-column-header") Work
+					div(class="resume-content" id="work")
+						include work
 		
 		+screen("contact")
+			h2 Get In Touch
+			div(class="links")
+				a(href="https://www.linkedin.com/in/ammelieneth/")
+					i(class="fa fa-linkedin fa-5x" aria-hidden="true")
+				a(href="https://www.instagram.com/smorpopcorn/")
+					i(class="fa fa-instagram fa-5x" aria-hidden="true")
+				a(href="mailto:ammelieneth@gmail.com")
+					i(class="fa fa-envelope-o fa-5x" aria-hidden="true")
+					
+
+			

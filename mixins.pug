@@ -1,14 +1,33 @@
 mixin screen(id)
-	section(class!="screen" + " " + id id=id)
+	section(class!="screen" + " " + "screen-"+ id id=id)
 		if block
 			block
 
 
-mixin nav(...items)
+mixin nav(...sections)
 	nav
 		ul
-			each item in items
+			each section in sections
 				li
-					a(href='index.html#' + item)= item
+					a(class="nav-link" + " " + section + "-link" href='index.html#' + section)= section
 					
+		
+mixin nav-link(section, text)
+	a(class="nav-link" + " " + section + "-link" href='index.html#' + section)= text
+
+
+mixin resume-entry(title, organizer, period, location, description, ...responsibilities)
+	div(class='resume-entry')
+		div(class='short-info')
+				h4= title
+				p= organizer
+				p= period
+				p= location
+		div(class='resume-description')
+			p= description
+			
+			if responsibilities
+			ul(class='responsibilities')
+				each responsibility in responsibilities
+					li= responsibility
 		
