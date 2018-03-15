@@ -13,14 +13,26 @@ $text: #EAEBED
 /****************************/
 /*		GENERAL LAYOUT		*/
 /****************************/
+body
+	display: flex
+	flex-flow: column nowrap
+	align-items: center
+
 .screen
 	min-height: 100vh
-	margin: 0 5%
+	margin: 0 10vw
+	@media (min-width: 950px)
+		margin: 0
+		width: 90vw
 
 .screen-intro, .screen-about, .about-text
 	display: flex
 	flex-flow: column nowrap
 	justify-content: center
+
+.screen-about
+	@media (max-width: 800px)
+		padding: 3rem 0 6rem
 
 
 /****************************/
@@ -88,8 +100,10 @@ $text: #EAEBED
 	text-align: center
 
 	.links
-		display: flex
-		justify-content: center
+		display: grid
+		grid-template-columns: auto auto
+		@media (min-width: 725px)
+			grid-template-columns: auto auto auto auto
 
 
 
@@ -106,11 +120,15 @@ h1, h2, h3, h4, h5, h6, .short-info
 	font-family: 'Playfair Display', serif
 
 h1
-	font-size: 6rem
+	font-size: 4.7rem
+	@media (min-width: 550px)
+		font-size: 6rem
 
 h2
-	font-size: 3rem
+	font-size: 1.8rem
 	margin-bottom: 2rem
+	@media (min-width: 550px)
+		font-size: 3rem
 
 h3
 	font-size: 1.7rem
@@ -225,5 +243,8 @@ nav ul li
 /****************************/
 /*		CONTACT STYLES		*/
 /****************************/
-.links a
-	margin: 0 2rem 0 2rem
+.links
+	a, div
+		margin: 1rem 2rem
+	div
+		width: 80px
